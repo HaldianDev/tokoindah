@@ -83,6 +83,9 @@
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
         }
+     "ignore-platform-reqs": [
+            "ext-gd"
+      ]
     },
     "minimum-stability": "stable",
     "prefer-stable": true
