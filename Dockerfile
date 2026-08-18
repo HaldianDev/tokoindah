@@ -1,5 +1,5 @@
 FROM php:8.3-cli
-
+# Force update trigger
 # Install system dependencies & PHP extensions including GD
 RUN apt-get update && apt-get install -y \
     git \
