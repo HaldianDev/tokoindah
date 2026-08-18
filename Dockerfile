@@ -27,4 +27,4 @@ RUN composer install --optimize-autoloader --no-interaction --ignore-platform-re
 
 # Expose port and start application
 EXPOSE 8080
-CMD php artisan config:cache && php artisan route:cache && php artisan migrate --force && php -S 0.0.0.0:${PORT:-8080} -t public
+CMD php artisan config:cache && php artisan route:cache && php -S 0.0.0.0:${PORT:-8080} -t public
