@@ -25,6 +25,9 @@ COPY . /var/www/html
 ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN composer install --optimize-autoloader --no-interaction --ignore-platform-req=ext-gd
 
+# Ensure storage and bootstrap/cache are writable
+RUN chmod -R 777 storage bootstrap/cache
+
 # Expose port and start application
 EXPOSE 8080
-CMD php artisan config:cache && php artisan route:cache && php -S 0.0.0.0:${PORT:-8080} -t public
+CMD php artisan config:clear && php artisan cache:clear && php -S 0.0.0.0:${PORT:-8080} -t public
