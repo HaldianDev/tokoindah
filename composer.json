@@ -82,7 +82,7 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
-        }
+        },
      "ignore-platform-reqs": [
             "ext-gd"
       ]
